@@ -1,18 +1,27 @@
-listen = ":9508"
+listen = ":9506"
+grpc_listen = ":9602"
+propscommon_api = "10.10.50.12:9601"
+time_out = 3
 
 [dbservers]
     [dbservers.qipaidb]
-        host = "10.10.50.13"
+        host = "81.68.107.248"w
         port = 5432
         dbname = "qipaidb"
         user = "qipai"
         password = "qipai#xq5"
 
-[redisservers]
-    [redisservers.awardcache]
-        addr = "10.10.50.13:6379"
-        db = 0
+    [dbservers.statdb]
+        host = "81.68.107.248"
+        port = 5432
+        dbname = "statdb"
+        user = "qipai"
+        password = "qipai#xq5"
 
+
+    [redisservers.gameconfigcache]
+        addr = "81.68.107.248:6379"
+        db = 0
     [redisservers.usercache]
-        addr = "10.10.50.13:6379"
+        addr = "81.68.107.248:6379"
         db = 0
