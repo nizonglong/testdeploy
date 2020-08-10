@@ -1,0 +1,18 @@
+listen = ":9508"
+
+[dbservers]
+    [dbservers.qipaidb]
+        host = "10.10.50.13"
+        port = 5432
+        dbname = "qipaidb"
+        user = "qipai"
+        password = "qipai#xq5"
+
+[redisservers]
+    [redisservers.awardcache]
+        addr = "10.10.50.13:6379"
+        db = 0
+
+    [redisservers.usercache]
+        addr = "10.10.50.13:6379"
+        db = 0
